@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width:856px;
+			height:481px;
+			margin:0 auto;
+			position: relative;
+		}
+		video{
+			position: absolute;
+		}
+		canvas{
+			position: absolute;
+			z-index:1;
+		}
+		section{
+			margin-top:15px;
+			text-align: center;
+		}
+	</style>
+	<script src="js/msg.js"></script>
+</head>
+<body>
+	<div>
+		<video src="res/x.mp4" controls></video>
+		<canvas id="c3" width="856px" height="400px"></canvas>
+	</div>
+	<section>
+		请输入弹幕内容:
+		<input type="text" id="msg" placeholder="请尽情的蹂躏我....." maxlength="15">
+		<select name="" id="color">
+			<option value="#ff0">--请选择字体颜色--</option>
+			<option value="#f00">红色</option>
+			<option value="#0f0">绿色</option>
+			<option value="#00f">蓝色</option>
+		</select>
+		<select name="" id="font">
+			<option value="12px">--请选择字体大小--</option>
+			<option value="12px">小</option>
+			<option value="24px">中</option>
+			<option value="36px">大</option>
+		</select>
+		<button id="btn">发送弹幕</button>
+	</section>
+</body>
+<script src="js/main.js"></script>
+<!-- 保存状态 ctx.save ctx.restore()  当一个画布上要绘制多个元素,就是绘制之前要保存的-->
+</html>
